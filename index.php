@@ -9,8 +9,11 @@
             <br />
             	<?php 
              		include "dbo.php";
-            		echo $proquery;
-            	?>
+            		foreach($db->query('SELECT * FROM projects') as $row) 
+					{
+    					echo $row['projName']. "<br />" . $row['projDesc']. "<br />";//etc...
+					}
+					?>
 		</div>
 	</body>
 </html>
