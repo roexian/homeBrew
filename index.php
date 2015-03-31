@@ -1,3 +1,6 @@
+<?php
+include "init.php";
+?>
 <html>
 	<head>
 		<title>Roexian's projects page</title>		
@@ -8,12 +11,8 @@
             <br />
             <br />
             	<?php 
-             		include "dbo.php";
-            		foreach($db->query('SELECT * FROM projects') as $row) 
-					{
-    					echo $row['projName']. "<br />" . $row['projDesc']. "<br />";//etc...
-					}
-					?>
+            	testDB();
+            	?>
 		</div>
 	</body>
 </html>
